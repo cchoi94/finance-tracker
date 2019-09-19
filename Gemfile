@@ -7,6 +7,10 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
+gem 'jquery-rails', '~> 4.3'
 # pg for both development and production to prevent bugs
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
