@@ -53,7 +53,7 @@ class User < ApplicationRecord
   end
 
   def self.matches(field_name, param)
-    User.where("#{field_name} like?", "%#{param}%")
+    User.where("LOWER(#{field_name}) LIKE ?", "%#{param}%")
   end
 
   def except_current_users(users)
