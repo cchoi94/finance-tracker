@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  
   def show
     @user = User.find(params[:id])
     @user_stocks = @user.stocks
@@ -35,11 +34,10 @@ class UsersController < ApplicationController
   def add_friend
     @friend = User.find(params[:friend])
     if current_user.friendships.create!(friend_id: @friend.id)
-      flash[:success] = "Friend was successfully added"
+      flash[:success] = 'Friend was successfully added'
     else
-      flash[:danger] = "there was something wrong with the friend request"
+      flash[:danger] = 'there was something wrong with the friend request'
     end
     redirect_to my_friends_path
   end
-
 end
